@@ -13,6 +13,7 @@ top_terms_by_topic_tfidf <- function(df, text, group, plot = T){
   
   group <- enquo(group)
   text <- enquo(text)
+  #alghal
   words <- df %>%
     unnest_tokens(word, !!text) %>%
     count(!!group, word) %>% 
